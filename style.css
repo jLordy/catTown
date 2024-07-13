@@ -1,0 +1,288 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #D9F0FF;
+}
+
+#title{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.main-image {
+    position: relative;
+    background: url(https://docs.cat.town/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FRiCfHLy54m0G8KYbVa7Q%2Fblobs%2F4r42nKLzKaCJVvM0K7DX%2Fbanner.png&width=1248&dpr=1&quality=100&sign=3cd8c758&sv=1) no-repeat center;
+    background-size: cover;
+    height: 200px;
+    overflow: hidden;
+   
+}
+
+h2 {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000022; /* Dark grey color */
+    text-align: center;
+    margin-bottom: 20px;
+   
+    border-bottom: 2px solid #D9F0FF; /* Underline effect */
+    padding-bottom: 5px;
+}
+
+p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000022; /* Dark grey color */
+    margin-bottom: 15px;
+}
+/* Style for the list container */
+.list-container {
+    font-family: Arial, sans-serif;
+    width: 100%; /* Set the container to full width */
+    max-width: 1000px; /* Limit the maximum width for better readability */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #D9F0FF;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 3px #000022;
+}
+
+/* Style for list items */
+.list-item {
+    margin-bottom: 15px; /* Match margin with paragraphs */
+    font-family: Arial, sans-serif; /* Apply font family */
+    font-size: 16px; /* Apply font size */
+    line-height: 1.6; /* Apply line height */
+    color: #000022; /* Apply color */
+}
+
+/* Style for list headings */
+.list-heading {
+    font-size: 1.2em;
+    font-weight: bold; /* Bold the list headings */
+    margin-bottom: 10px;
+    color: #000022; /* Set color to black */
+}
+
+/* Style for list details */
+.list-details {
+    margin-left: 20px;
+}
+
+/* Style for list items */
+.list-details ul {
+    list-style-type: none; /* Remove default list style */
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.list-details ul li {
+    margin-bottom: 10px; /* Match margin with paragraphs */
+    padding-left: 20px; /* Add space for the bullet */
+    position: relative;
+}
+
+.list-details ul li::before {
+    content: "\2022"; /* Unicode character for bullet (•) */
+    color: #000022; /* Bullet color */
+    font-size: 1.2em; /* Adjust bullet size if needed */
+    position: absolute;
+    left: 0;
+    top: 4px; /* Adjust vertical alignment */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .list-container {
+        padding: 10px;
+    }
+    .list-details {
+        margin-left: 10px;
+    }
+}
+
+
+
+.container {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #191b1d;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 40px;
+    margin-bottom: -30px;
+}
+
+.container h1 {
+    margin: 0;
+    font-size: 48px;
+}
+
+.container h1 span {
+    padding: 6px 14px;
+    display: inline-block;
+}
+
+.cen {
+    margin: 20px;
+    display: block;
+    font-size: 22px;
+}
+
+/* Style the navigation menu */
+[data-tab-info] {
+    display: none;
+  }
+
+  .active[data-tab-info] {
+    display: block;
+  }
+
+  .tab-content {
+    margin-top: 1rem;
+    padding-left: 1rem;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+  }
+
+  .tabs {
+    border-bottom: 1px solid #D9F0FF;
+    background-color: #A3D5FF;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+    display: flex;
+    
+  }
+
+  .tabs span {
+    background: #A3D5FF;
+    padding: 10px;
+    border: 1px solid rgb(255, 255, 255);
+  }
+
+  .tabs span:hover {
+    background: #89c1fa;
+    cursor: pointer;
+    color: #000022;
+  }
+
+  /* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style for the main content */
+.tab-content {
+    min-height: calc(100vh - 100px); /* Ensure content fills at least the viewport height minus footer height */
+    padding: 20px; /* Example padding for content */
+}
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style for the hyperlink list container */
+.hyperlink-list-container {
+    padding: 20px;
+    background-color: #f9f9f9; /* Light grey background */
+    border: 1px solid #ddd; /* Light grey border */
+    border-radius: 5px; /* Rounded corners */
+    max-width: 400px; /* Maximum width */
+    margin: 20px auto; /* Center align with margin */
+    text-align: center; /* Center align text */
+}
+
+/* Style for the heading */
+.hyperlink-list-container h3 {
+    font-family: Arial, sans-serif;
+    font-size: 1.5em;
+    color: #333; /* Dark grey color */
+    margin-bottom: 15px; /* Space below heading */
+}
+
+/* Style for the list */
+.hyperlink-list {
+    list-style-type: none; /* Remove default list style */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+/* Style for list items */
+.hyperlink-list li {
+    margin-bottom: 10px; /* Space between items */
+}
+
+/* Style for hyperlinks */
+.hyperlink-list a {
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    color: #4CAF50; /* Green color for links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Hover effect for hyperlinks */
+.hyperlink-list a:hover {
+    color: #45a049; /* Darker green on hover */
+}
+
+/* Basic styling for the footer */
+.footer {
+    position: fixed; /* Fixed position */
+    bottom: 0; /* Stick to the bottom */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    background-color: #A3D5FF;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center; /* Center align text */
+}
+
+/* Style for footer content */
+.footer-content {
+    margin-bottom: 20px; /* Space between paragraph and buttons */
+}
+
+/* Style for the paragraph */
+.footer-content p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/* Style for the button container */
+.button-container {
+    margin-top: 10px; /* Space above buttons */
+}
+
+/* Style for the hyperlink buttons */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 1em;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin: 0 10px; /* Add spacing between buttons */
+}
+
+.button:hover {
+    background-color: #8fd492;
+}
