@@ -557,7 +557,13 @@ p {
   }
 
   .faq-tab{
+    padding: 1rem;
     margin-bottom: 15vh;
+    border-radius: 8px;
+    border-radius: 30px;
+    background: #ffffff;
+    box-shadow: 6px 6px 12px #bebebe,
+                -6px -6px 12px #ffffff;
   }
 
 .footer-buttons{
