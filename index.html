@@ -12,29 +12,31 @@
 <body>
     <div>
         <div class="main-image"> </div>
-       
-        <div class="container">
-            <h1><span id="title">Cat Town Guide</span></h1>
-        </div>
 
        <!-- Tabs Detail -->
-        <div class="tabs">
-            <span data-tab-value="#tab_1">About</span>
-            <span data-tab-value="#tab_2">Guide</span>
-            <span data-tab-value="#tab_3">Help</span>
-         </div>
+        <div class="tabs-container">
+            <div class="tabs">
+                <span data-tab-value="#tab_1">About</span>
+                <span data-tab-value="#tab_2">Guide</span>
+                <span data-tab-value="#tab_3">Help</span>
+             </div>
+        </div>
+        
   
       <!-- Tab content -->
       <div class="tab-content">
         <div class="tabs__tab active" id="tab_1" data-tab-info>
             
             <div>
-                <h1>What is Cat Town?</h1>
-                <p>Welcome to Cat Town, a relaxing game where you can collect cats and 
-                    combine fluffy creatures to earn more cryptocurrency (ETH) and special 
-                    rewards ($KIBBLE). It's all about growing your digital kitty collection 
-                    and earning cool bonuses along the way!
-                </p>
+                <div class="intro">
+                    <h1>What is Cat Town?</h1>
+                    <p>Welcome to Cat Town, a relaxing game where you can collect cats and 
+                        combine floofs to earn more cryptocurrency (ETH) and special 
+                        rewards ($KIBBLE).<br> It's all about growing your digital kitty collection 
+                        and earning cool bonuses along the way!
+                    </p>
+                </div>
+                
                 <div class="list-container">
                     <div class="list-item">
                         <div class="list-heading">Getting Started in Cat Town</div>
@@ -64,54 +66,67 @@
                         </div>
                     </div>
                 </div>
+                <div class="parent-container">
+                    <div class="footer-content">
+                        <p id="footer-text">I'd appreciate your support through using my referral link. </p>
+                        <div class="button-container">
+                            <div class="buttons">
+                                <a href ="https://cat.town/?ref=3c74684e6a356a3f3a6f6a3c4d3f3e3e346f6d486e6a3d484e4a3a3c3c4e3c3e69383d384a4f39393b3c"> 
+                                    <button class="btn"><span></span><p data-start="good luck!" data-text="Start!" data-title="Play Game"></p></button></a>  
+                            </div>
+                    </div>
+                </div>
+               
+            </div>
             </div>
 
         </div>
         <div class="tabs__tab" id="tab_2" data-tab-info>
             <div class="list-container">
                 <h2>Tips and Guides</h2>
-                <h3>How can I take profit faster?</h3>
+                <h3>1. How to start with Cat Town?</h3>
+                <p>To begin your journey in Cat Town, consider acquiring a cat. 
+                   Cats produce floofs, which can be converted into ETH.
+                   Additionally, combining floofs can generate more cats for you.</p>
+                <h3>2. How can I earn $KIBBLES?</h3>
+                <p>You have the opportunity to earn KIBBLE by collecting 3 tickets over 3 consecutive days.
+                    Each time you combine or purchase cats, you earn tickets.
+                    Remember, tickets can only be claimed once per day, and the daily reset occurs at 8 AM PST.</p>
+                <h3>3. How can I take profit?</h3>
+                <p>You can profit by selling ETH or combining cats to earn KIBBLE. 
+                    Please note that earning KIBBLE is eligible for holders of 100 cats or more.</p>
+
+                <h3>4. But how can I take profit faster?</h3>
                 <p>Please remember that investing more can lead to faster earnings. 
                     However, it's important to only invest what you can afford to lose.</p>
-                <h3>How can I join fishing even I don't have sufficient KIBBLES?</h3>
+                <h3>5. How can I join fishing even I don't have sufficient KIBBLES?</h3>
                 <p>Stay active and alert at all times to participate in our community giveaways!</p>
+               
             </div>
-            <div class="hyperlink-list-container">
-                <h3>Support Cat Town Community</h3>
-                <ul class="hyperlink-list">
-                    <li><a href="https://www.tiktok.com/@cattownbase">Tiktok</a></li>
-                    <li><a href="https://www.facebook.com/cattownbase">Facebook</a></li>
-                    <li><a href="https://www.youtube.com/@CatTownOfficial">Youtube</a></li>
-                    <li><a href="https://devfolio.co/projects/cat-town-45ca">Vote Here</a></li>
-                </ul>
-            </div>
-            <div class="crypto-container">
-                
-                <div class="converter-container">
-                    <h2>ETH and KIBBLE Converter</h2>
-                    <div class="converter-row">
-                        <input type="number" id="crypto-amount" placeholder="Enter amount">
-                        <select id="crypto-select">
-                            <option value="eth">ETH</option>
-                            <option value="kibble">KIBBLE</option>
-                        </select>
-                    </div>
-                    <div class="converter-row">
-                        <input type="number" id="converted-amount" placeholder="Converted amount">
-                        <select id="currency-select">
-                            <option value="usd">USD</option>
-                            <option value="php">PHP</option>
-                        </select>
+                <div class="crypto-container">
+                    
+                    <div class="converter-container">
+                        <h2>ETH and KIBBLE Converter</h2>
+                        <div class="converter-row">
+                            <input type="number" id="crypto-amount" placeholder="Enter amount">
+                            <select id="crypto-select">
+                                <option value="eth">ETH</option>
+                                <option value="kibble">KIBBLE</option>
+                            </select>
+                        </div>
+                        <div class="converter-row">
+                            <input type="number" id="converted-amount" placeholder="Converted amount">
+                            <select id="currency-select">
+                                <option value="usd">USD</option>
+                                <option value="php">PHP</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-            </div>
-            
-            
-
-  
+       
         </div>
         <div class="tabs__tab" id="tab_3" data-tab-info>
-            <div>
+            <div class="faq-tab">
                 <h2>Frequently Asked Questions</h2>
                 <h3>1. What wallet is recommended?</h3>
                 <p>Consider using Coinbase Wallet or Smart Wallet (for free rod),
@@ -140,7 +155,7 @@
                     fishing rod for 25$ of KIBBLE. Alternatively, Smart Wallet users 
                     can claim a free rod. Keep in mind also that fishing rod is lifetime investment</p>
                 <h3>7. How to create smart wallet account?</h3>
-                <p>To get started, visit cat.town in your web browser, connect your Coinbase Wallet, 
+                <p>To get started, visit cat.town in your web browser or create account here at <a href="https://wallet.coinbase.com">Smart Wallet</a>, click Coinbase Wallet, 
                     and follow the prompts to create a Smart Wallet account. 
                     Once completed, you'll have successfully set up your Smart Wallet account!</p>
                 <h3>8. How long will it take to ROI?</h3>
@@ -155,25 +170,27 @@
                 <h3>11. How can I earn KIBBLES?</h3>
                 <p>You can earn KIBBLE by acquiring 3 tickets. Each time you combine or purchase cats, 
                     you earn tickets. 
-                    Tickets can be claimed once per day, with claiming resetting at 8 AM PHT.</p>
+                    Tickets can be claimed once per day, with claiming resetting at 8 AM PST.</p>
+                <h3>12. I can't find my ETH funds, where did it go?</h3>
+                <p>Please verify that your assets are on the Base network and not on the Ethereum network.</p>
+                <h3>13. Do I need gas fee for every transaction?</h3>
+                <p>Yes, you need ETH for transaction fees.</p>
             </div>
-
-  
         </div>
       </div>
     </div>
 
     <footer class="footer">
         <div class="footer-container">
-            <div class="footer-content">
-
-                    <p>If my assistance has been valuable to you, 
-                    I'd appreciate your support through using my referral link. </p>
-                
-                <div class="button-container">
-                    <a href ="https://cat.town/?ref=3c74684e6a356a3f3a6f6a3c4d3f3e3e346f6d486e6a3d484e4a3a3c3c4e3c3e69383d384a4f39393b3c" class="button">Play Now!</a>
-                    <a href ="https://t.me/cattownphcommunity" class="button">Join Telegram</a>
-                </div>
+            <div class="hyperlink-list-container">
+                <h3>Support Cat Town Community</h3>
+                <ul class="hyperlink-list">
+                    <li><a href ="https://t.me/cattownphcommunity" class="footer-buttons">Telegram</a></li>
+                    <li><a href="https://www.tiktok.com/@cattownbase" class="footer-buttons">Tiktok</a></li>
+                    <li><a href="https://www.facebook.com/cattownbase" class="footer-buttons">Facebook</a></li>
+                    <li><a href="https://www.youtube.com/@CatTownOfficial" class="footer-buttons">Youtube</a></li>
+                    <li><a href="https://devfolio.co/projects/cat-town-45ca" class="footer-buttons">Vote Here</a></li>
+                </ul>
             </div>
         </div>
     </footer>
