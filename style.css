@@ -6,6 +6,7 @@ html, body {
     background: #D9F0FF;
 }
 
+
 #title{
     font-family: Arial, Helvetica, sans-serif;
 
@@ -104,8 +105,6 @@ p {
         margin-left: 10px;
     }
 }
-
-
 
 .container {
     position: relative;
@@ -285,4 +284,54 @@ p {
 
 .button:hover {
     background-color: #8fd492;
+}
+.crypto-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.converter-container {
+    width: 100%;
+}
+
+.converter-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.converter-row select,
+.converter-row input[type="number"] {
+    flex: 1;
+    margin: 0 5px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.converter-row input[type="number"] {
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .converter-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .converter-row select,
+    .converter-row input[type="number"] {
+        margin: 5px 0;
+        width: 100%;
+    }
 }

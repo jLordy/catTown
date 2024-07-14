@@ -66,7 +66,6 @@
                 </div>
             </div>
 
-            
         </div>
         <div class="tabs__tab" id="tab_2" data-tab-info>
             <div class="list-container">
@@ -86,6 +85,27 @@
                     <li><a href="https://devfolio.co/projects/cat-town-45ca">Vote Here</a></li>
                 </ul>
             </div>
+            <div class="crypto-container">
+                
+                <div class="converter-container">
+                    <h2>ETH and KIBBLE Converter</h2>
+                    <div class="converter-row">
+                        <input type="number" id="crypto-amount" placeholder="Enter amount">
+                        <select id="crypto-select">
+                            <option value="eth">ETH</option>
+                            <option value="kibble">KIBBLE</option>
+                        </select>
+                    </div>
+                    <div class="converter-row">
+                        <input type="number" id="converted-amount" placeholder="Converted amount">
+                        <select id="currency-select">
+                            <option value="usd">USD</option>
+                            <option value="php">PHP</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
             
 
   
@@ -157,23 +177,7 @@
             </div>
         </div>
     </footer>
-    <script type="text/javascript">
-
-        // function to get each tab details
-        const tabs = document.querySelectorAll('[data-tab-value]')
-        const tabInfos = document.querySelectorAll('[data-tab-info]')
-    
-        tabs.forEach(tab => {
-          tab.addEventListener('click', () => {
-            const target = document
-              .querySelector(tab.dataset.tabValue);
-            tabInfos.forEach(tabInfo => {
-              tabInfo.classList.remove('active')
-            })
-            target.classList.add('active');
-          })
-        })
-      </script>
+     <script src="script.js"></script>
     </body>
 
 </html>
