@@ -105,3 +105,65 @@ function convertBackToCrypto() {
         document.getElementById('crypto-amount').value = '';
     }
 }
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const catAmountInput = document.getElementById('cat-amount');
+    const catConvertedAmountInput = document.getElementById('cat-converted-amount');
+
+    // Conversion rate
+    const CAT_TO_ETH_RATE = 0.00007; // 1 Cat = 0.00007 ETH
+
+    async function fetchEthToPhpRate() {
+        try {
+            const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=php');
+            if (!response.ok) throw new Error('Network response was not ok');
+            const data = await response.json();
+            console.log('ETH to PHP rate fetched:', data.ethereum.php); // Debug log
+            return data.ethereum.php;
+        } catch (error) {
+            console.error('Error fetching ETH to PHP rate:', error);
+            return null;
+        }
+    }
+
+    async function handleCatAmountInput() {
+        const catAmount = parseFloat(catAmountInput.value);
+        console.log('Cat amount input:', catAmount); // Debug log
+        if (!isNaN(catAmount)) {
+            const ethToPhpRate = await fetchEthToPhpRate();
+            if (ethToPhpRate !== null) {
+                const ethAmount = catAmount * CAT_TO_ETH_RATE;
+                const phpAmount = ethAmount * ethToPhpRate;
+                catConvertedAmountInput.value = phpAmount.toFixed(2);
+                console.log('Converted PHP amount:', phpAmount); // Debug log
+            } else {
+                catConvertedAmountInput.value = 'Error fetching rate';
+            }
+        } else {
+            catConvertedAmountInput.value = '';
+        }
+    }
+
+    async function handlePhpAmountInput() {
+        const phpAmount = parseFloat(catConvertedAmountInput.value);
+        console.log('PHP amount input:', phpAmount); // Debug log
+        if (!isNaN(phpAmount)) {
+            const ethToPhpRate = await fetchEthToPhpRate();
+            if (ethToPhpRate !== null) {
+                const ethAmount = phpAmount / ethToPhpRate;
+                const catAmount = ethAmount / CAT_TO_ETH_RATE;
+                catAmountInput.value = catAmount.toFixed(2);
+                console.log('Converted Cat amount:', catAmount); // Debug log
+            } else {
+                catAmountInput.value = 'Error fetching rate';
+            }
+        } else {
+            catAmountInput.value = '';
+        }
+    }
+
+    catAmountInput.addEventListener('input', handleCatAmountInput);
+    catConvertedAmountInput.addEventListener('input', handlePhpAmountInput);
+});
