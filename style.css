@@ -2,54 +2,58 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
     background: #F5F7F8;
 }
 
 .main-image {
     position: relative;
     background: url(https://docs.cat.town/~gitbook/image?url=https%3A%2F%2Fcontent.gitbook.com%2Fcontent%2FRiCfHLy54m0G8KYbVa7Q%2Fblobs%2F4r42nKLzKaCJVvM0K7DX%2Fbanner.png&width=1248&dpr=1&quality=100&sign=3cd8c758&sv=1) no-repeat center;
-    background-size: cover;
-    height: 200px;
+    height: 300px;
     overflow: hidden;
-   
 }
 
 .intro{
-    text-align: center;
-}
-h2 {
-    font-family: Arial, sans-serif;
-    font-size: 24px;
-    font-weight: bold;
-    color: #000022; /* Dark grey color */
-    text-align: center;
-    border-bottom: 2px solid #F5F7F8; /* Underline effect */
-    padding-bottom: 5px;
-    margin-bottom: 15px;
+  text-align: left;
+  line-height: 1.1px;
+  text-align: justify;
+  margin-bottom: 16px;
 }
 
+.intro p{
+  max-width: 850px;
+}
+
+.container{
+  display: grid;
+  place-items: center;
+  height: 85vh; /* Full viewport height for vertical centering */
+  margin-top: 16px;
+}
 p {
-    font-family: Arial, sans-serif;
     font-size: 16px;
     line-height: 1.6;
     color: #000022; /* Dark grey color */
     margin-bottom: 10px;
     text-indent: 30px;
 }
+
+
 /* Style for the list container */
 .list-container {
     font-family: Arial, sans-serif;
-    width: 100%; /* Set the container to full width */
-    max-width: 1000px; /* Limit the maximum width for better readability */
-    margin: 0 auto;
+    width: 65vw; /* Set the container to full width */
+    max-width: 600px; /* Limit the maximum width for better readability */
+    margin: auto 15px;
+    width: 80%; /* Adjust as needed for responsiveness */
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
     border-radius: 30px;
     background: #ffffff;
-    box-shadow: 6px 6px 12px #bebebe,
-                -6px -6px 12px #ffffff;
+    box-shadow: 2px 2px 8px #bebebe,
+    -2px -2px 8px #ffffff;
+
 }
 
 /* Style for list items */
@@ -106,34 +110,6 @@ p {
     }
 }
 
-.container {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #191b1d;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-top: 40px;
-    margin-bottom: -30px;
-}
-
-.container h1 {
-    margin: 0;
-    font-size: 48px;
-}
-
-.container h1 span {
-    padding: 6px 14px;
-    display: inline-block;
-}
-
-.cen {
-    margin: 20px;
-    display: block;
-    font-size: 22px;
-}
 
 /* Style the navigation menu */
 [data-tab-info] {
@@ -145,38 +121,34 @@ p {
   }
 
   .tab-content {
-    margin-top: 1rem;
-    padding-left: 1rem;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     color: rgb(0, 0, 0);
     
   }
+  
   .tabs-container{
     display: flex;
-    justify-content: center; /* Center horizontally */
+    justify-content: left; /* Center horizontally */
     align-items: center; /* Center vertically */
-    margin-left: 1rem;
-    
+    margin: 0 16px;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
   }
   .tabs {
     margin-top: 1rem;
-    
     padding: 1.2rem;
     font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(0, 0, 0);
     display: flex;
-    background-color: rgb(243, 149, 102);
     width: 35vh;
     height: 1vh;
     align-items: center;
     justify-content: space-around;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 8px;
-    
+
   }
+
   .tabs span {
     outline: 0 !important;
   border: 0 !important;
@@ -186,7 +158,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgb(233, 233, 233);
+
   transition: all ease-in-out 0.3s;
   cursor: pointer;
   margin-left: 1vh;
@@ -194,9 +166,8 @@ p {
 }
 
   .tabs span:hover {
-    background: rgb(243, 149, 102);
     cursor: pointer;
-    color: rgb(255, 255, 255);
+    color: rgb(173, 173, 173);
     .button:hover {
         transform: translateY(-5px);
       }
@@ -208,32 +179,26 @@ p {
     min-height: calc(100vh - 100px); /* Ensure content fills at least the viewport height minus footer height */
     padding: 20px; /* Example padding for content */
 }
-/* Reset default margin and padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 .hyperlink-list-container {
     text-align: center; /* Center align the entire container */
     max-width: 90%; /* Set a maximum width for the container */
     margin: 0 auto; /* Center the container horizontally */
-    padding: 0 20px; /* Add padding to the sides for spacing */
     box-sizing: border-box; /* Include padding in the width calculation */
+    background-color: transparent;
+    border: none; /* Optional: Remove border if desired */
+    cursor: pointer; /* Optional: Show pointer cursor on hover */
 }
 
 .hyperlink-list {
-    list-style-type: none; /* Remove default list styles */
-    padding: 0; /* Remove default padding */
-    margin: 10px 0; /* Optional margin */
     display: flex; /* Use flexbox for layout */
     justify-content: center; /* Center items horizontally */
     flex-wrap: wrap; /* Wrap items to next line on smaller screens */
 }
 
-.hyperlink-list li {
-    margin: 0.5rem 1rem; /* Adjust horizontal margin between list items */
-    
+.footer ul, ol {
+  list-style-type: none; /* Removes bullets from unordered lists and numbers from ordered lists */
+  padding-left: 0; /* Optional: removes default padding */
 }
 
 .hyperlink-list li a {
@@ -242,10 +207,11 @@ p {
     color: #333; /* Set link color */
     font-size: 14px; /* Set font size */
     font-weight: bold; /* Set font weight */
-    padding: 10px 15px; /* Add padding inside links */
-    border-radius: 4px; /* Add rounded corners */
-    background-color: #f0f0f0; /* Set background color */
+    background-color: transparent;
+    border: none; /* Optional: Remove border if desired */
+    cursor: pointer; /* Optional: Show pointer cursor on hover */
     transition: background-color 0.3s ease; /* Smooth transition for background color */
+    
 }
 
 .hyperlink-list li a:hover {
@@ -255,40 +221,57 @@ p {
 .footer {
     position: relative; /* Fixed position */
     bottom: 0; /* Stick to the bottom */
-    left: 0; /* Align to the left */
     width: 100%; /* Full width */
-    background-color: #fc874d;
-    color: #f5f7f8;
-    padding: 20px 0;
     text-align: center; /* Center align text */
-    z-index: 1;
-}
-
-.footer-container {
     display: flex; /* Use flexbox for layout */
     justify-content: space-between; /* Space items evenly */
     align-items: center; /* Center align vertically */
-    max-width: 1200px; /* Limit maximum width */
-    margin: 0 auto; /* Center align horizontally */
+    box-shadow: 0 -4px 2px -2px rgba(0, 0, 0, 0.2);
+    margin-bottom: -16px;
+    margin-top: 16px;
 }
+
 .parent-container {
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
-
+    margin-bottom: 32px;
 }
+
+.tips-container{
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin-bottom: 32px;
+}
+
+.tips-container h2{
+  text-align: center;
+}
+
+.faq-tab h2{
+  text-align: center;
+}
+
+.crypto-container h2{
+  text-align: center;
+}
+
 .footer-content {
-    margin-bottom: 15vh; /* Space between paragraph and buttons */
-    text-align: center;
-    background-color: white;
-    margin-top: 2rem;
-    padding: 20px;
-    width: 35vh;
-    height: 254px;
-    border-radius: 30px;
-    background: #ffffff;
-    box-shadow: 6px 6px 12px #bebebe,
-                -6px -6px 12px #ffffff;
+  font-family: Arial, sans-serif;
+  width: 65vw; /* Set the container to full width */
+  max-width: 650px; /* Limit the maximum width for better readability */
+  width: 80%; /* Adjust as needed for responsiveness */
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  background: #ffffff;
+  box-shadow: 2px 2px 8px #bebebe,
+  -2px -2px 8px #ffffff;
+  padding: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* Space between elements */
+  margin-top: 16px;
 }
 
 .footer-content p {
@@ -298,9 +281,7 @@ p {
 }
 
 .button-container {
-    display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center align buttons horizontally */
-    align-items: center; /* Center align buttons vertically */
+  flex: 1 1 200px; /* Grow, shrink, and basis (min-width) */
 }
 
 .button {
@@ -327,15 +308,14 @@ p {
     flex-direction: column;
     align-items: center;
     max-width: 600px;
-    margin: 20px auto;
-    margin-bottom: 25vh;
+    margin: 16px auto;
     padding: 20px;
     border: 1px solid #ccc;
-    border-radius: 8px;
-    border-radius: 30px;
+    border-radius: 16px;
     background: #ffffff;
     box-shadow: 2px 2px 8px #bebebe,
                 -2px -2px 8px #ffffff;
+    margin-bottom: 96px;
 }
 
 .converter-container {
@@ -392,7 +372,7 @@ p {
   .buttons button {
     width: 150px;
     height: 50px;
-    background-color: white;
+    background-color: #F8BC24;
     margin: 20px;
     color: #568fa6;
     position: relative;
@@ -407,15 +387,15 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 3px;
   }
+
   
   .buttons button:before, .buttons button:after {
     content: "";
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: #44d8a4;
+    background-color: #ffb414;
     transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
   }
   
@@ -446,7 +426,7 @@ p {
     position: absolute;
     width: 2px;
     height: 0;
-    background-color: #44d8a4;
+    background-color: #ffb414;
     transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
   }
   
@@ -487,7 +467,7 @@ p {
   .buttons button p:after {
     content: attr(data-text);
     top: 150%;
-    color: #44d8a4;
+    color: #030303;
   }
   
   .buttons button:hover:before, .buttons button:hover:after {
@@ -513,7 +493,7 @@ p {
   }
   
   .buttons button.start {
-    background-color: #44d8a4;
+    background-color: #030303;
     box-shadow: 0px 5px 10px -10px rgba(0, 0, 0, 0.2);
     transition: all 0.2s ease;
   }
@@ -556,18 +536,27 @@ p {
     outline: 0;
   }
 
-  .faq-tab{
+  .faq-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 16px auto;
     padding: 1rem;
-    margin-bottom: 15vh;
-    border-radius: 8px;
     border-radius: 30px;
     background: #ffffff;
-    box-shadow: 6px 6px 12px #bebebe,
-                -6px -6px 12px #ffffff;
+    box-shadow: 2px 2px 8px #bebebe,
+                -2px -2px 8px #ffffff;
+    max-width: 850px;
+    margin-bottom: 96px;
   }
 
+  .faq-tab{
+    padding: 0 32px;
+  }
+
+
 .footer-buttons{
-align-items: center;
+  align-items: center;
  background-color: #FFFFFF;
  border: 1px solid rgba(0, 0, 0, 0.1);
  border-radius: .25rem;
